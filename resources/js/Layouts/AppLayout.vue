@@ -23,6 +23,9 @@
                             <jet-nav-link :href="route('promedio_movil_simple')" :active="route().current('promedio_movil_simple')">
                                 Promedio móvil simple
                             </jet-nav-link>
+                            <jet-nav-link :href="route('promedio_movil_ponderado')" :active="route().current('promedio_movil_ponderado')">
+                                Promedio móvil ponderado
+                            </jet-nav-link>
                         </div>
                     </div>
 
@@ -48,13 +51,13 @@
 
                                 <template #content>
                                     <!-- Account Management -->
-                                    <div class="block px-4 py-2 text-xs text-gray-400">
-                                        Manage Account
-                                    </div>
+                                    <!--<div class="block px-4 py-2 text-xs text-gray-400">-->
+                                        <!--Manage Account-->
+                                    <!--</div>-->
 
-                                    <jet-dropdown-link :href="route('profile.show')">
-                                        Profile
-                                    </jet-dropdown-link>
+                                    <!--<jet-dropdown-link :href="route('profile.show')">-->
+                                        <!--Profile-->
+                                    <!--</jet-dropdown-link>-->
 
                                     <jet-dropdown-link :href="route('api-tokens.index')" v-if="$page.jetstream.hasApiFeatures">
                                         API Tokens
@@ -101,7 +104,7 @@
                                     <!-- Authentication -->
                                     <form @submit.prevent="logout">
                                         <jet-dropdown-link as="button">
-                                            Logout
+                                            Cerrar Sesión
                                         </jet-dropdown-link>
                                     </form>
                                 </template>
