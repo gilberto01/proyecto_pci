@@ -4364,7 +4364,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       if (this.numero_periodos && this.no_periodos_calcular) {
-        var ultimas_demandas = this.demandas.slice(Math.max(this.demandas.length - this.no_periodos_calcular, 1));
+        var ultimas_demandas = this.demandas.slice(Math.max(this.demandas.length - this.no_periodos_calcular, 0));
         var suma = 0;
         ultimas_demandas.forEach(function (valor, indice, array) {
           if (valor !== null) {
@@ -4380,7 +4380,7 @@ __webpack_require__.r(__webpack_exports__);
         return 'Datos incompletos';
       }
 
-      return resultado;
+      return resultado.toFixed(2);
     }
   },
   methods: {
@@ -4509,7 +4509,7 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     Resultado: function Resultado() {
       if (this.numero_periodos && this.no_periodos_calcular) {
-        var ultimas_demandas = this.demandas.slice(Math.max(this.demandas.length - this.no_periodos_calcular, 1));
+        var ultimas_demandas = this.demandas.slice(Math.max(this.demandas.length - this.no_periodos_calcular, 0));
         var suma = 0;
         ultimas_demandas.forEach(function (valor, indice, array) {
           if (valor !== null) {
@@ -4525,7 +4525,7 @@ __webpack_require__.r(__webpack_exports__);
         return 'Datos incompletos';
       }
 
-      return resultado;
+      return resultado.toFixed(2);
     }
   },
   methods: {
@@ -50399,11 +50399,7 @@ var render = function() {
                               ])
                             : _vm._e()
                         }),
-                        _vm._v(
-                          " ) / " +
-                            _vm._s(_vm.no_periodos_calcular) +
-                            "\n                            "
-                        )
+                        _vm._v(" )\n                            ")
                       ],
                       2
                     ),

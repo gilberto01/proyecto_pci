@@ -65,7 +65,7 @@
                                     ( <span v-for="(item,index) in demandas" v-if="(index + 1) > (numero_periodos - no_periodos_calcular)">
                                     ( P.{{index + 1}} * <span>{{ponderacion[index - (numero_periodos - no_periodos_calcular)]}}</span> )
                                     <span v-if="index+1 < demandas.length">+ </span>
-                                    </span> ) / {{no_periodos_calcular}}
+                                    </span> )
                                 </label>
                                 <p class="mt-4">Resultado:</p>
                                 <label class="block LetraFinal tracking-wide text-grey-darker font-bold mb-2 mt-3">
@@ -111,7 +111,7 @@
                 var _this = this;
 
                 if(this.numero_periodos && this.no_periodos_calcular){
-                    var ultimas_demandas = this.demandas.slice(Math.max(this.demandas.length - this.no_periodos_calcular, 1));
+                    var ultimas_demandas = this.demandas.slice(Math.max(this.demandas.length - this.no_periodos_calcular, 0));
 
                     var suma = 0;
                     ultimas_demandas.forEach( function(valor, indice, array) {
@@ -129,7 +129,7 @@
                 if (isNaN(resultado)) {
                     return 'Datos incompletos';
                 }
-                return resultado;
+                return resultado.toFixed(2);
             }
         },
         methods:{

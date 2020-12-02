@@ -88,7 +88,7 @@
             Resultado: function(){
 
                 if(this.numero_periodos && this.no_periodos_calcular){
-                    var ultimas_demandas = this.demandas.slice(Math.max(this.demandas.length - this.no_periodos_calcular, 1));
+                    var ultimas_demandas = this.demandas.slice(Math.max(this.demandas.length - this.no_periodos_calcular, 0));
 
                     var suma = 0;
                     ultimas_demandas.forEach( function(valor, indice, array) {
@@ -105,7 +105,7 @@
                 if (isNaN(resultado)) {
                     return 'Datos incompletos';
                 }
-                return resultado;
+                return resultado.toFixed(2);
             }
         },
         methods:{
