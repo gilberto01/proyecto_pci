@@ -26,6 +26,9 @@
                             <jet-nav-link :href="route('promedio_movil_ponderado')" :active="route().current('promedio_movil_ponderado')">
                                 Promedio móvil ponderado
                             </jet-nav-link>
+                            <jet-nav-link :href="route('suavizacion')" :active="route().current('suavizacion')">
+                                Suavización exponencial
+                            </jet-nav-link>
                         </div>
                     </div>
 

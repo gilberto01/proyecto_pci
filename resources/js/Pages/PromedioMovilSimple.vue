@@ -43,7 +43,7 @@
                         <div class="-mx-3 md:flex mb-6">
                             <div class="md:w-1/1 px-3 mb-6 md:mb-0">
                                 <label class="block uppercase Titulos tracking-wide text-grey-darker text-xs font-bold mb-2">
-                                    5.	Pronosticos de la demanda
+                                    5.	Pronósticos de la demanda
                                 </label>
                                 <p class="mt-4">Formula:</p>
                                 <label class="block uppercase LetraFinal tracking-wide text-grey-darker text-xs font-bold mb-2 mt-3">

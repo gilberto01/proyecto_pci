@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('auto.login');
+    return view('auth.login');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -28,3 +28,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/promedio_movil_simple', f
 Route::middleware(['auth:sanctum', 'verified'])->get('/promedio_movil_ponderado', function () {
     return Inertia\Inertia::render('PromedioMovilPonderado');
 })->name('promedio_movil_ponderado');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/suavizacion', function () {
+    return Inertia\Inertia::render('SuavizacionExponencial');
+})->name('suavizacion');
